@@ -76,6 +76,7 @@ html{
     display: inline-block;
     margin-top: 15px;
     border: none;
+    text-align: center;
 }
 
 .btn:hover{
@@ -355,6 +356,15 @@ html{
 .contact-info i[class*="ti-"]::before{
     width: 30px;
     display: inline-block;
+}
+
+.contact-info a{
+    color: #0000f0;
+    opacity: 0.8    ;
+}
+
+.contact-info a:hover{
+    opacity: 1;
 }
 
 .contact-form{
