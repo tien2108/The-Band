@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="./asset/fonts/themify-icons-font/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="./asset/css/responsive.css">
 </head>
+
 <body>
     <div id="main">
         <div id="header">
@@ -57,7 +59,14 @@
                 <h2 class="section-heading">THE BAND</h2>
                 <p class="section-sub-heading">We love music</p>
                 <p class="about-text">
-                    We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    We have created a fictional band website. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                    nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+                    consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                    enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.
                 </p>
                 <div class="row member-list">
                     <div class="col col-third text-center s-col-full mt-32">
@@ -96,27 +105,27 @@
                                 <h3 class="place-heading">New York</h3>
                                 <p class="place-time">Fri 27 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="btn s-full-width">Buy Tickets</a>
+                                <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
-                            </div>
-                        
+                        </div>
+
                         <div class="col col-third s-col-full mt-16">
                             <img src="./asset/img/places/paris.jpg" alt="New York" class="places-img">
                             <div class="place-body">
                                 <h3 class="place-heading">Paris</h3>
                                 <p class="place-time">Sat 28 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="btn s-full-width">Buy Tickets</a>
-                            </div>  
+                                <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
+                            </div>
                         </div>
-                        
+
                         <div class="col col-third s-col-full mt-16">
                             <img src="./asset/img/places/san_fran.jpg" alt="New York" class="places-img">
                             <div class="place-body">
                                 <h3 class="place-heading">San Francisco</h3>
                                 <p class="place-time">Sun 29 Nov 2016</p>
                                 <p class="place-desc">Praesent tincidunt sed tellus ut rutrum sed vitae justo.</p>
-                                <a href="" class="btn s-full-width">Buy Tickets</a>
+                                <button class="btn s-full-width js-buy-ticket">Buy Tickets</button>
                             </div>
                         </div>
                     </div>
@@ -138,18 +147,22 @@
                         <form action="">
                             <div class="row">
                                 <div class="col col-half s-col-full">
-                                    <input type="text" name="" placeholder="Name" required id="" class="form-control">
+                                    <input type="text" name="" placeholder="Name" required id="contact-name"
+                                        class="form-control">
                                 </div>
                                 <div class="col col-half s-col-full s-mt-8">
-                                    <input type="email" name="" placeholder="Email" required id="" class="form-control">
+                                    <input type="email" name="" placeholder="Email" required id="contact-email"
+                                        class="form-control">
                                 </div>
                             </div>
                             <div class="row mt-8">
                                 <div class="col col-full">
-                                    <input type="text" name="" placeholder="Message" required id="" class="form-control">
+                                    <input type="text" name="" placeholder="Message" required id="contact-message"
+                                        class="form-control">
                                 </div>
                             </div>
-                            <input class="contact-submit-btn btn pull-right mt-16 s-full-width" type="submit" value="SEND">
+                            <input class="contact-submit-btn btn pull-right mt-16 s-full-width" type="submit"
+                                value="SEND">
                         </form>
                     </div>
                 </div>
@@ -173,35 +186,42 @@
         </div>
     </div>
 
-    <script>
-        var header = document.getElementById('header')
-        var mobileMenu = document.getElementById('mobile-menu')
-        var headerHeight = header.clientHeight
+    <div class="modal js-modal">
+        <div class="modal__container js-modal__container">
+            <div class="modal__close js-modal__close">
+                <i class="ti-close"></i>
+            </div>
 
-        mobileMenu.onclick = function(){
-            var isClose = header.clientHeight === headerHeight
-            if(isClose){
-                header.style.height = 'auto'
-            }
-            else{
-                header.style.height = null
-            }
-        }
+            <header class="modal__header">
+                <i class="ti-bag modal__header-icon"></i>
+                Tickets
+            </header>
 
-        var menuItems = document.querySelectorAll('#nav li a[href*="#"]')
-        for(var i =0 ;i <menuItems.length;i++){
-            var menuItem = menuItems[i]
+            <div class="modal__body">
+                <label for="tickets-quanity" class="modal__label">
+                    <i class="ti-shopping-cart"></i>
+                    Tickets, $15 per person
+                </label>
+                <input id="tickets-quanity" type="text" class="modal__input" placeholder="How many?">
+                <label for="tickets-email" class="modal__label">
+                    <i class="ti-user"></i>
+                    Send to
+                </label>
+                <input id="tickets-email" type="email" class="modal__input" placeholder="Enter email">
+                <button id="buy-tickets">
+                    Pay
+                    <i class="ti-check"></i>
+                </button>
+            </div>
 
-            menuItem.onclick = function(event){
-                var isParentMenu = this.nextElementSibling && this.nextElementSibling.classList.contains('subnav')
-                if(isParentMenu){
-                    event.preventDefault()
-                } 
-                else{
-                    header.style.height = null
-                }
-            }
-        }
-</script>
+            <footer class="modal__footer">
+                <p class="modal__help">Need <a href="">help?</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="./asset/js/main.js">
+    </script>
 </body>
+
 </html>
